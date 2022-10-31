@@ -37,14 +37,14 @@ class SettingsFragment(override val titleFragment: String): BaseFragment(R.layou
             viewModel.themeFlow
                 .flowWithLifecycle(viewLifecycleOwner.lifecycle)
                 .onEach {
-                    themeMode.isChecked = it == ThemeState.NIGHT
+                    themeMode.isChecked = it == com.example.abcd.domain.model.ThemeState.NIGHT
                 }
                 .launchIn(viewLifecycleOwner.lifecycleScope)
 
             themeMode.setOnCheckedChangeListener(object : CompoundButton.OnCheckedChangeListener{
                 override fun onCheckedChanged(p0: CompoundButton?, isDefaultTheme: Boolean) {
                     if(p0?.isPressed == true){
-                        viewModel.onChangeThemeMode(if(isDefaultTheme) ThemeState.NIGHT else ThemeState.DAY)
+                        viewModel.onChangeThemeMode(if(isDefaultTheme) com.example.abcd.domain.model.ThemeState.NIGHT else com.example.abcd.domain.model.ThemeState.DAY)
                         AppCompatDelegate.setDefaultNightMode(
                             if(isDefaultTheme) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO)
                         TaskStackBuilder.create(activity)

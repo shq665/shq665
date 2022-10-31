@@ -8,10 +8,10 @@ import com.example.abcd.presentation.ext.loadImageUrl
 
 class CharacterViewHolder(
     private val binding: RecyclerItemBinding,
-    private val userClicked: (Character) -> Unit
+    private val userClicked: (com.example.abcd.domain.model.Character) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(character: Character) {
+    fun bind(character: com.example.abcd.domain.model.Character) {
         with(binding) {
             characterIcon.loadImageUrl(character.img)
             characterName.text = character.name
