@@ -11,16 +11,16 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 
 class MapViewModel(
-    private val getCharactersLocalUseCase: GetCharactersLocalUseCase
+    private val getCharactersLocalUseCase: com.example.abcd.domain.usecase.GetCharactersLocalUseCase
 ) : ViewModel() {
 
-    private var listWithLatLng = mutableListOf<Character>()
+    private var listWithLatLng = mutableListOf<com.example.abcd.domain.model.Character>()
 
     private val markerFlow = MutableSharedFlow<LatLng>(
         replay = 1, onBufferOverflow = BufferOverflow.DROP_OLDEST
     )
 
-    val dataFlow = MutableSharedFlow<Lce<List<Character>>>(
+    val dataFlow = MutableSharedFlow<Lce<List<com.example.abcd.domain.model.Character>>>(
         replay = 1,
         extraBufferCapacity = 1,
         onBufferOverflow = BufferOverflow.DROP_OLDEST

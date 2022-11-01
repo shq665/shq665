@@ -14,9 +14,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 
 class CharactersViewModel(
-    private val getCharactersUseCase: GetCharactersUseCase,
-    private val getCharactersLocalUseCase: GetCharactersLocalUseCase,
-    private val saveCharactersUseCase: SaveCharactersUseCase
+    private val getCharactersUseCase: com.example.abcd.domain.usecase.GetCharactersUseCase,
+    private val getCharactersLocalUseCase: com.example.abcd.domain.usecase.GetCharactersLocalUseCase,
+    private val saveCharactersUseCase: com.example.abcd.domain.usecase.SaveCharactersUseCase
 ) : ViewModel() {
 
 

@@ -62,7 +62,7 @@ class FavoriteFragment(override val titleFragment: String) : BaseFragment(R.layo
         }
     }
 
-    private fun clickItemCharacter(ch: Character){
+    private fun clickItemCharacter(ch: com.example.abcd.domain.model.Character){
         getScreenManager()?.addFragmentToBackStack(DetailsFragment(ch.name, ch.id.rawId))
     }
 }

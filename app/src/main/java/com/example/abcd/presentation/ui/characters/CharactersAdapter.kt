@@ -10,11 +10,11 @@ import com.example.abcd.domain.model.Character
 
 class CharacterAdapter(
     context: Context,
-    private val userClicked: (Character) -> Unit
-) : ListAdapter<Character, CharacterViewHolder>(DIFF_UTIL) {
+    private val userClicked: (com.example.abcd.domain.model.Character) -> Unit
+) : ListAdapter<com.example.abcd.domain.model.Character, CharacterViewHolder>(DIFF_UTIL) {
 
     private val layoutInflater = LayoutInflater.from(context)
-    private var sourcesList = mutableListOf<Character>()
+    private var sourcesList = mutableListOf<com.example.abcd.domain.model.Character>()
 
     fun filter(text: String){
         if(sourcesList.isEmpty()) sourcesList = currentList
@@ -23,12 +23,12 @@ class CharacterAdapter(
     }
 
     companion object {
-        private val DIFF_UTIL = object : DiffUtil.ItemCallback<Character>() {
-            override fun areItemsTheSame(oldItem: Character, newItem: Character): Boolean {
+        private val DIFF_UTIL = object : DiffUtil.ItemCallback<com.example.abcd.domain.model.Character>() {
+            override fun areItemsTheSame(oldItem: com.example.abcd.domain.model.Character, newItem: com.example.abcd.domain.model.Character): Boolean {
                 return oldItem.id == newItem.id
             }
 
-            override fun areContentsTheSame(oldItem: Character, newItem: Character): Boolean {
+            override fun areContentsTheSame(oldItem: com.example.abcd.domain.model.Character, newItem: com.example.abcd.domain.model.Character): Boolean {
                 return oldItem.name == newItem.name && oldItem.img == newItem.img
             }
         }

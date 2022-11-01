@@ -80,7 +80,7 @@ class CharactersFragment(override val titleFragment: String) : BaseFragment(R.la
 
     }
 
-    private fun clickItemCharacter(ch: Character){
+    private fun clickItemCharacter(ch: com.example.abcd.domain.model.Character){
         getScreenManager()?.addFragmentToBackStack(DetailsFragment(ch.name, ch.id.rawId))
     }
 

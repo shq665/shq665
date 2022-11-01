@@ -11,8 +11,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 
 class DetailsViewModel(
-    private val getCharacterDetailsUseCase: GetCharacterDetailsUseCase,
-    private val updateCharacterFavoriteUseCase: UpdateCharacterFavoriteUseCase,
+    private val getCharacterDetailsUseCase: com.example.abcd.domain.usecase.GetCharacterDetailsUseCase,
+    private val updateCharacterFavoriteUseCase: com.example.abcd.domain.usecase.UpdateCharacterFavoriteUseCase,
     private val id: Int
 ) : ViewModel() {
 
@@ -22,7 +22,7 @@ class DetailsViewModel(
         replay = 1, onBufferOverflow = BufferOverflow.DROP_OLDEST
     )
 
-    val detailsCharacterFlow = MutableSharedFlow<Lce<Character>>(
+    val detailsCharacterFlow = MutableSharedFlow<Lce<com.example.abcd.domain.model.Character>>(
         replay = 1,
         extraBufferCapacity = 1,
         onBufferOverflow = BufferOverflow.DROP_OLDEST

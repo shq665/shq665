@@ -10,10 +10,10 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 
 class FavoriteViewModel(
-    private val getCharactersLocalUseCase: GetCharactersLocalUseCase
+    private val getCharactersLocalUseCase: com.example.abcd.domain.usecase.GetCharactersLocalUseCase
 ) : ViewModel() {
 
-     val dataFlow = MutableSharedFlow<Lce<List<Character>>>(
+     val dataFlow = MutableSharedFlow<Lce<List<com.example.abcd.domain.model.Character>>>(
         replay = 1,
         extraBufferCapacity = 1,
         onBufferOverflow = BufferOverflow.DROP_OLDEST
