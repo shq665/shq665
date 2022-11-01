@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="orange">#C19351</color>
+    <color name="orange_light">#95FFC063</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,4 +9,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#1528CE</color>
+    <color name="colorPrimaryVariant">#001EB3</color>
+    <color name="lightGrey">#ECECEC</color>
+    <color name="colorRed">#B40000</color>
+    <color name="colorGreen">#20B000</color>
+    <color name="colorLight">#DCD7AD</color>
+    <color name="defaultTextColor">#8A131313</color>
+    <color name="defaultTitleTextColor">#000000</color>
+    <color name="selected_indicator_color">#FFFFFF</color>
+    <color name="unselected_indicator_color">#85FFFFFF</color>
+    <color name="frame_background">#EFEFEF</color>
 </resources>
